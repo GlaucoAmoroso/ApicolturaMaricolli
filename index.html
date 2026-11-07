@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="it" data-title-key="meta.title" data-desc-key="meta.desc">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miele biodinamico a Breda di Piave (TV) | Apicoltura Maricolli</title>
+    <meta name="description" content="Miele biodinamico di Breda di Piave (TV): tarassaco, acacia, tiglio, castagno e millefiori da apicoltura biologica ICEA. Ordina su WhatsApp, visite in azienda su appuntamento.">
+    <meta name="theme-color" content="#96702d">
+
+    <!-- Open Graph / social.
+         ⚠️ og:image deve essere un URL ASSOLUTO per funzionare davvero (WhatsApp, Facebook...).
+         Quando conosci il dominio, sostituisci con es. https://www.tuodominio.it/images/galleria/apicoltura-maricolli-1.jpg -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Apicoltura Maricolli">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Miele biodinamico a Breda di Piave (TV) | Apicoltura Maricolli">
+    <meta property="og:description" content="Miele biodinamico di Breda di Piave (TV): tarassaco, acacia, tiglio, castagno e millefiori da apicoltura biologica ICEA. Ordina su WhatsApp, visite in azienda su appuntamento.">
+    <meta property="og:image" content="images/galleria/apicoltura-maricolli-1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Miele biodinamico a Breda di Piave (TV) | Apicoltura Maricolli">
+    <meta name="twitter:description" content="Miele biodinamico di Breda di Piave (TV): tarassaco, acacia, tiglio, castagno e millefiori da apicoltura biologica ICEA.">
+    <meta name="twitter:image" content="images/galleria/apicoltura-maricolli-1.jpg">
+
+    <!-- Tailwind via CDN. Per la produzione conviene compilare un CSS statico (npx tailwindcss -o tailwind.css --minify)
+         e sostituire questa riga con <link rel="stylesheet" href="tailwind.css">. Se lo fai, togli la riga "cdn.tailwindcss.com" dalla Cookie Policy. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --header-gold: rgba(150, 112, 45, 0.92);   /* oro più scuro: il bianco sopra ha contrasto ≥ 4.5:1 */
+            --gold-text: #8a6420;                      /* oro per testi piccoli su fondo chiaro (contrasto ≥ 4.5:1) */
+            --bg-light: #f5f4f1;
+            --text-dark: #2c1e16;
+            --header-h: 72px;
+        }
+
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+        /* Le ancore non finiscono sotto l'header fisso */
+        [id] { scroll-margin-top: calc(var(--header-h) + 8px); }
+
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Focus visibile per chi naviga da tastiera */
+        :focus-visible { outline: 2px solid var(--text-dark); outline-offset: 3px; }
+        #main-header :focus-visible { outline-color: #ffffff; }
+
+        /* HEADER */
+        #main-header {
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h); z-index: 50;
+            background-color: var(--header-gold);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 1.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        @media (min-width: 768px) { #main-header { padding: 0 3rem; } }
+
+        .logo-text {
+            font-weight: 900;
+            font-size: clamp(0.85rem, 4.4vw, 1.25rem);   /* si rimpicciolisce sugli schermi stretti per non andare a capo */
+            letter-spacing: -0.02em; color: #ffffff; text-decoration: none; white-space: nowrap;
+            transition: color 0.3s ease; text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        .logo-text:hover { color: var(--text-dark); }
+
+        .nav-link {
+            font-size: 0.875rem; font-weight: 700; letter-spacing: 0.05em; color: #ffffff;
+            text-transform: uppercase; text-decoration: none; transition: color 0.3s ease; position: relative;
+        }
+        .nav-link:hover { color: var(--text-dark); }
+
+        .contact-pill {
+            display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.25rem;
+            background-color: rgba(255, 255, 255, 0.25); border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 9999px; color: #ffffff; font-size: 0.875rem; font-weight: 600;
+            transition: all 0.3s ease; white-space: nowrap;
+        }
+        .contact-pill:hover { background-color: var(--text-dark); color: #ffffff; border-color: var(--text-dark); }
+
+        /* TOGGLE LINGUA (pillola traslucida, stesso linguaggio della contact-pill) */
+        .lang-pill {
+            display: inline-flex; align-items: center; padding: 3px; gap: 2px;
+            background-color: rgba(255, 255, 255, 0.22); border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 9999px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+        }
+        .lang-pill button {
+            min-width: 2.25rem; padding: 0.3rem 0.6rem; border-radius: 9999px; border: 0; background: transparent;
+            color: #ffffff; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; cursor: pointer;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+        .lang-pill button:hover { background-color: rgba(255, 255, 255, 0.25); }
+        .lang-pill button[aria-pressed="true"] { background-color: #ffffff; color: var(--text-dark); }
+        /* versione grande per il drawer mobile (su fondo chiaro) */
+        .lang-pill--lg { background-color: #f0eee9; border-color: #d7ccc8; backdrop-filter: none; }
+        .lang-pill--lg button { color: #5d4037; font-size: 0.9rem; padding: 0.6rem 1.4rem; min-width: 3.5rem; }
+        .lang-pill--lg button:hover { background-color: #e6e2da; }
+        .lang-pill--lg button[aria-pressed="true"] { background-color: var(--text-dark); color: #ffffff; }
+        .lang-pill--lg button:focus-visible { outline-color: var(--text-dark); }
+
+        /* HERO ANIMATION */
+        #scroll-wrapper-honey { height: 215vh; position: relative; display: block; }
+        .sticky-container-honey { position: sticky; top: 0; height: 115vh; overflow: hidden; background-color: var(--bg-light); }
+        #sequence-canvas-honey { width: 100%; height: 100%; object-fit: cover; object-position: center center; position: absolute; top: 0; left: 0; }
+        @media (min-width: 1024px) { #sequence-canvas-honey { object-position: center 15%; } }
+
+        .honey-gradient-overlay {
+            position: absolute; inset: 0; z-index: 2; pointer-events: none;
+            background: linear-gradient(to top, var(--bg-light) 0%, rgba(245, 244, 241, 0.8) 15%, rgba(245, 244, 241, 0.4) 35%, transparent 60%);
+            opacity: 0; will-change: opacity;
+        }
+
+        /* Pulsante dell'hero: visibile nella prima schermata, poi sfuma con lo scroll */
+        #hero-content {
+            position: absolute; left: 0; right: 0; bottom: 15vh; z-index: 3; text-align: center;
+            padding: 0 1.5rem calc(2.5rem + env(safe-area-inset-bottom));
+            will-change: opacity;
+        }
+        .hero-cta {
+            display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; border-radius: 9999px;
+            background: #fff; color: var(--text-dark); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.12em;
+            text-transform: uppercase; text-decoration: none; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .hero-cta:hover { background: var(--text-dark); color: #fff; transform: translateY(-1px); }
+
+        .content-section {
+            padding: 100px 20px; text-align: center; max-width: 1000px; margin: 0 auto; min-height: 70vh;
+            background-color: var(--bg-light); position: relative; z-index: 10;
+        }
+
+        /* SCROLLBAR CUSTOM E CAROSELLO */
+        #cart-items::-webkit-scrollbar, #mobile-menu-nav::-webkit-scrollbar { width: 6px; }
+        #cart-items::-webkit-scrollbar-track, #mobile-menu-nav::-webkit-scrollbar-track { background: #fcfbf9; }
+        #cart-items::-webkit-scrollbar-thumb, #mobile-menu-nav::-webkit-scrollbar-thumb { background: #d7ccc8; border-radius: 10px; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body>
+
+    <a href="#storia" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-[#2c1e16] focus:px-4 focus:py-2 focus:rounded-full focus:font-bold" data-i18n="skip">Vai al contenuto</a>
+
+    <!-- Annunci per screen reader (aggiunta al carrello, mappa caricata...) -->
+    <div id="live-region" class="sr-only" role="status" aria-live="polite"></div>
+
+    <noscript>
+        <div style="padding:1rem;background:#fff3cd;color:#2c1e16;text-align:center;font-size:.9rem;position:relative;z-index:60;margin-top:72px;">
+            Per usare carrello e animazioni serve JavaScript. Puoi comunque ordinare chiamando +39 329 827 5626 o scrivendo a api.maricolli@libero.it.
+        </div>
+    </noscript>
+
+    <header id="main-header">
+        <div class="flex-shrink-0 z-10">
+            <a href="#" class="logo-text" data-i18n-attr="aria-label:aria.home" aria-label="Apicoltura Maricolli, home">APICOLTURA MARICOLLI</a>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2" data-i18n-attr="aria-label:aria.mainnav" aria-label="Navigazione principale">
+            <a href="#storia" class="nav-link" data-i18n="nav.story">La Storia</a>
+            <a href="#galleria" class="nav-link" data-i18n="nav.gallery">Galleria</a>
+            <a href="#shop" class="nav-link" data-i18n="nav.shop">Shop</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3 md:gap-5 flex-shrink-0 z-10">
+            <!-- Toggle lingua: nell'header solo da desktop (lg); su telefono e tablet sta nel menu laterale -->
+            <div class="lang-pill hidden lg:inline-flex" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="Lingua">
+                <button type="button" data-lang-btn="it" aria-pressed="true" lang="it" title="Italiano">IT</button>
+                <button type="button" data-lang-btn="en" aria-pressed="false" lang="en" title="English">EN</button>
+            </div>
+
+            <a href="#contatti" class="contact-pill hidden sm:flex">
+                <svg class="w-[1.1rem] h-[1.1rem]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span data-i18n="nav.contacts">Contatti</span>
+            </a>
+
+            <button type="button" id="cart-toggle-btn" class="relative text-white hover:text-[#2c1e16] transition-colors ml-1" aria-label="Apri il carrello" aria-expanded="false" aria-controls="cart-sidebar">
+                <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                <span id="cart-badge" aria-hidden="true" class="absolute -top-1.5 -right-2 bg-red-700 text-white text-[10px] md:text-xs font-bold w-4 h-4 md:w-5 md:h-5 flex items-center justify-center rounded-full hidden">0</span>
+            </button>
+
+            <button type="button" id="mobile-menu-open" class="lg:hidden text-white hover:text-[#2c1e16] transition-colors p-1 ml-1" data-i18n-attr="aria-label:aria.menu.open" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[65] opacity-0 pointer-events-none backdrop-blur-sm transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title" inert aria-hidden="true" class="fixed top-0 left-0 w-[80%] max-w-[320px] h-full bg-[#fcfbf9] shadow-2xl z-[70] transform -translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-[#f0eee9] flex items-center justify-between bg-white">
+            <span id="mobile-menu-title" class="font-bold text-[#8a6420] tracking-widest uppercase text-sm" data-i18n="m.nav">Navigazione</span>
+            <button type="button" id="mobile-menu-close" class="text-[#795548] hover:text-[#2c1e16] transition-colors p-1" data-i18n-attr="aria-label:aria.menu.close" aria-label="Chiudi il menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <nav id="mobile-menu-nav" class="flex-1 overflow-y-auto flex flex-col p-8 gap-8" data-i18n-attr="aria-label:aria.mobilenav" aria-label="Navigazione mobile">
+            <a href="#storia" class="mobile-nav-link text-xl font-bold text-[#2c1e16] uppercase tracking-wider flex items-center gap-4">
+                <span class="w-2 h-2 rounded-full bg-[#c19a55]" aria-hidden="true"></span> <span data-i18n="m.story">La Storia</span>
+            </a>
+            <a href="#galleria" class="mobile-nav-link text-xl font-bold text-[#2c1e16] uppercase tracking-wider flex items-center gap-4">
+                <span class="w-2 h-2 rounded-full bg-[#c19a55]" aria-hidden="true"></span> <span data-i18n="m.gallery">Galleria</span>
+            </a>
+            <a href="#shop" class="mobile-nav-link text-xl font-bold text-[#2c1e16] uppercase tracking-wider flex items-center gap-4">
+                <span class="w-2 h-2 rounded-full bg-[#c19a55]" aria-hidden="true"></span> <span data-i18n="m.shop">Shop Mieli</span>
+            </a>
+            <a href="#contatti" class="mobile-nav-link text-xl font-bold text-[#2c1e16] uppercase tracking-wider flex items-center gap-4">
+                <span class="w-2 h-2 rounded-full bg-[#c19a55]" aria-hidden="true"></span> <span data-i18n="m.contacts">Contatti e Mappa</span>
+            </a>
+        </nav>
+        <!-- Toggle lingua nel drawer: sempre disponibile su mobile, grande e facile da toccare -->
+        <div class="p-8 border-t border-[#f0eee9] bg-white">
+            <span class="block text-xs font-bold tracking-widest uppercase text-[#795548] mb-3" data-i18n="m.lang">Lingua</span>
+            <div class="lang-pill lang-pill--lg" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="Lingua">
+                <button type="button" data-lang-btn="it" aria-pressed="true" lang="it">IT</button>
+                <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div id="scroll-wrapper-honey">
+        <div class="sticky-container-honey">
+            <canvas id="sequence-canvas-honey" aria-hidden="true"></canvas>
+            <div class="honey-gradient-overlay" id="dynamic-gradient"></div>
+            <!-- Solo il pulsante: il nome è già nell'header e sull'etichetta. L'h1 resta nascosto per SEO e screen reader. -->
+            <h1 class="sr-only">Apicoltura Maricolli</h1>
+            <div id="hero-content">
+                <a href="#shop" class="hero-cta" data-i18n="hero.cta">Scopri i nostri mieli</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+    <!-- SEZIONE METODO & FILOSOFIA -->
+    <section class="content-section" id="storia">
+        <span class="uppercase tracking-[0.2em] text-sm font-bold text-[#8a6420] mb-4 block" data-i18n="story.eyebrow">Dal 2007</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 2rem;" data-i18n="story.title">Il Rispetto dell'Alveare</h2>
+        <div style="max-width: 650px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.25rem; line-height: 1.8; color: #4e342e; margin-bottom: 1.5rem;" data-i18n="story.p1">Adottiamo fin dalle nostre origini la <strong>metodica apistica biodinamica</strong>. Per noi, la produzione di miele e cera viene sempre dopo una priorità assoluta: la salute e l'equilibrio delle nostre api.</p>
+            <p style="font-size: 1.1rem; line-height: 1.7; color: #795548; margin-bottom: 2.5rem;" data-i18n="story.p2">Non raccogliamo il polline per non sottrarre nutrimento vitale alle famiglie, mentre la propoli viene riutilizzata internamente. Il nostro percorso biodinamico è una continua presa di coscienza del legame profondo tra l'essere umano e l'essere dell'alveare.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-xs md:text-sm font-semibold tracking-wider text-[#795548] uppercase border-t border-[#d7ccc8] pt-8">
+                <span data-i18n="story.cert1">Biologico ICEA (Cod. E2657)</span><span class="hidden md:block" aria-hidden="true">•</span><span data-i18n="story.cert2">In transizione Demeter</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERIA CAROSELLO (AUTOSCROLL E DRAG) -->
+    <section class="content-section pt-0 pb-20 w-full max-w-full px-0" id="galleria">
+        <div class="mb-12 px-4">
+            <span class="uppercase tracking-[0.2em] text-sm font-bold text-[#8a6420] mb-4 block" data-i18n="gal.eyebrow">La nostra vita in apiario</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 300;" data-i18n="gal.title">Momenti e Passione</h2>
+        </div>
+
+        <div class="relative w-full overflow-hidden">
+            <!-- Le foto hanno pointer-events-none per non interferire con il drag. Il contenitore è raggiungibile da tastiera (frecce). -->
+            <div id="gallery-slider" tabindex="0" role="region" data-i18n-attr="aria-label:aria.gallery" aria-label="Galleria fotografica" class="flex gap-4 md:gap-6 overflow-x-auto px-4 md:px-12 pb-8 no-scrollbar cursor-grab select-none">
+
+                <div class="flex-shrink-0 w-[85vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] group shadow-lg relative rounded-none border border-[#eaddcf]">
+                    <img src="images/galleria/apicoltura-maricolli-1.jpg" alt="Alveari al tramonto" data-i18n-attr="alt:gal.alt1" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover aspect-video transform transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                </div>
+
+                <div class="flex-shrink-0 w-[85vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] group shadow-lg relative rounded-none border border-[#eaddcf]">
+                    <img src="images/galleria/apicoltura-maricolli-2.jpg" alt="Apiario nel bosco" data-i18n-attr="alt:gal.alt2" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover aspect-video transform transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                </div>
+
+                <div class="flex-shrink-0 w-[85vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] group shadow-lg relative rounded-none border border-[#eaddcf]">
+                    <img src="images/galleria/apicoltura-maricolli-3.jpg" alt="L'apicoltore nella natura" data-i18n-attr="alt:gal.alt3" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover aspect-video transform transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                </div>
+
+                <div class="flex-shrink-0 w-[85vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] group shadow-lg relative rounded-none border border-[#eaddcf]">
+                    <img src="images/galleria/apicoltura-maricolli-4.jpg" alt="Vasetti di miele in lavorazione" data-i18n-attr="alt:gal.alt4" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover aspect-video transform transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                </div>
+
+                <div class="flex-shrink-0 w-[85vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] group shadow-lg relative rounded-none border border-[#eaddcf]">
+                    <img src="images/galleria/apicoltura-maricolli-5.jpg" alt="Esposizione dei mieli" data-i18n-attr="alt:gal.alt5" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover aspect-video transform transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                </div>
+
+                <div class="flex-shrink-0 w-[85vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] group shadow-lg relative rounded-none border border-[#eaddcf]">
+                    <img src="images/galleria/apicoltura-maricolli-6.jpg" alt="Mieli e cera d'api" data-i18n-attr="alt:gal.alt6" width="1280" height="720" loading="lazy" decoding="async" class="w-full h-full object-cover aspect-video transform transition-transform duration-700 group-hover:scale-105 pointer-events-none">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE SHOP / PRODOTTI
+         Prezzi, peso, prezzo al kg e disponibilità si gestiscono in app.js (oggetto PRODUCTS e CONFIG): qui restano solo i testi. -->
+    <section class="content-section" id="shop" style="background-color: #ffffff; border-top: 1px solid #f0eee9; border-bottom: 1px solid #f0eee9; max-width: 100%;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <span class="uppercase tracking-[0.2em] text-sm font-bold text-[#8a6420] mb-4 block" data-i18n="shop.eyebrow">Le nostre produzioni</span>
+            <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 4rem;" data-i18n="shop.title">I Mieli Biodinamici</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left px-4">
+
+                <article data-product="tarassaco" class="group bg-white rounded-3xl p-4 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(193,154,85,0.3)] transition-all duration-500 border border-[#f0eee9]">
+                    <button type="button" class="info-trigger block w-full cursor-pointer bg-[#fcfbf9] rounded-2xl aspect-square mb-5 transition-colors group-hover:bg-[#f5f4f1] overflow-hidden p-4 relative" data-id="tarassaco">
+                        <img src="images/tarassaco.png" alt="Miele di Tarassaco" data-i18n-attr="alt:p.tarassaco.full" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                            <span class="bg-white/90 text-[#2c1e16] text-[10px] font-bold uppercase px-3 py-1.5 rounded-full shadow-sm tracking-wider" data-i18n="shop.sheet">Scheda tecnica</span>
+                        </span>
+                        <span class="js-soldout-badge hidden absolute top-3 left-3 bg-[#2c1e16] text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider" data-i18n="shop.soldout">Esaurito</span>
+                    </button>
+                    <div class="px-2 pb-2">
+                        <h3 class="text-xl font-medium text-[#2c1e16] mb-1" data-i18n="p.tarassaco.name">Tarassaco</h3>
+                        <p class="text-sm text-[#795548] mb-1" data-i18n="p.tarassaco.tag">Raccolto primaverile intenso</p>
+                        <p class="js-unit text-xs text-[#795548] mb-4"></p>
+                        <div class="flex items-center justify-between">
+                            <span class="js-price font-bold text-lg text-[#8a6420]"></span>
+                            <button type="button" class="add-to-cart-btn text-xs uppercase tracking-wider font-bold border-2 border-[#2c1e16] text-[#2c1e16] px-5 py-2.5 rounded-full hover:bg-[#2c1e16] hover:text-white transition-colors" data-id="tarassaco"><span class="lbl-add" data-i18n="shop.add">Aggiungi</span><span class="lbl-sold hidden" data-i18n="shop.soldout">Esaurito</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-product="acacia" class="group bg-white rounded-3xl p-4 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(193,154,85,0.3)] transition-all duration-500 border border-[#f0eee9]">
+                    <button type="button" class="info-trigger block w-full cursor-pointer bg-[#fcfbf9] rounded-2xl aspect-square mb-5 transition-colors group-hover:bg-[#f5f4f1] overflow-hidden p-4 relative" data-id="acacia">
+                        <img src="images/acacia.png" alt="Miele di Acacia" data-i18n-attr="alt:p.acacia.full" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                            <span class="bg-white/90 text-[#2c1e16] text-[10px] font-bold uppercase px-3 py-1.5 rounded-full shadow-sm tracking-wider" data-i18n="shop.sheet">Scheda tecnica</span>
+                        </span>
+                        <span class="js-soldout-badge hidden absolute top-3 left-3 bg-[#2c1e16] text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider" data-i18n="shop.soldout">Esaurito</span>
+                    </button>
+                    <div class="px-2 pb-2">
+                        <h3 class="text-xl font-medium text-[#2c1e16] mb-1" data-i18n="p.acacia.name">Acacia</h3>
+                        <p class="text-sm text-[#795548] mb-1" data-i18n="p.acacia.tag">Delicato e cristallino</p>
+                        <p class="js-unit text-xs text-[#795548] mb-4"></p>
+                        <div class="flex items-center justify-between">
+                            <span class="js-price font-bold text-lg text-[#8a6420]"></span>
+                            <button type="button" class="add-to-cart-btn text-xs uppercase tracking-wider font-bold border-2 border-[#2c1e16] text-[#2c1e16] px-5 py-2.5 rounded-full hover:bg-[#2c1e16] hover:text-white transition-colors" data-id="acacia"><span class="lbl-add" data-i18n="shop.add">Aggiungi</span><span class="lbl-sold hidden" data-i18n="shop.soldout">Esaurito</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-product="tiglio" class="group bg-white rounded-3xl p-4 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(193,154,85,0.3)] transition-all duration-500 border border-[#f0eee9]">
+                    <button type="button" class="info-trigger block w-full cursor-pointer bg-[#fcfbf9] rounded-2xl aspect-square mb-5 transition-colors group-hover:bg-[#f5f4f1] overflow-hidden p-4 relative" data-id="tiglio">
+                        <img src="images/tiglio.png" alt="Miele di Tiglio" data-i18n-attr="alt:p.tiglio.full" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                            <span class="bg-white/90 text-[#2c1e16] text-[10px] font-bold uppercase px-3 py-1.5 rounded-full shadow-sm tracking-wider" data-i18n="shop.sheet">Scheda tecnica</span>
+                        </span>
+                        <span class="js-soldout-badge hidden absolute top-3 left-3 bg-[#2c1e16] text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider" data-i18n="shop.soldout">Esaurito</span>
+                    </button>
+                    <div class="px-2 pb-2">
+                        <h3 class="text-xl font-medium text-[#2c1e16] mb-1" data-i18n="p.tiglio.name">Tiglio</h3>
+                        <p class="text-sm text-[#795548] mb-1" data-i18n="p.tiglio.tag">Aromatico e balsamico</p>
+                        <p class="js-unit text-xs text-[#795548] mb-4"></p>
+                        <div class="flex items-center justify-between">
+                            <span class="js-price font-bold text-lg text-[#8a6420]"></span>
+                            <button type="button" class="add-to-cart-btn text-xs uppercase tracking-wider font-bold border-2 border-[#2c1e16] text-[#2c1e16] px-5 py-2.5 rounded-full hover:bg-[#2c1e16] hover:text-white transition-colors" data-id="tiglio"><span class="lbl-add" data-i18n="shop.add">Aggiungi</span><span class="lbl-sold hidden" data-i18n="shop.soldout">Esaurito</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-product="castagno" class="group bg-white rounded-3xl p-4 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(193,154,85,0.3)] transition-all duration-500 border border-[#f0eee9]">
+                    <button type="button" class="info-trigger block w-full cursor-pointer bg-[#fcfbf9] rounded-2xl aspect-square mb-5 transition-colors group-hover:bg-[#f5f4f1] overflow-hidden p-4 relative" data-id="castagno">
+                        <img src="images/castagno.png" alt="Miele di Castagno" data-i18n-attr="alt:p.castagno.full" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                            <span class="bg-white/90 text-[#2c1e16] text-[10px] font-bold uppercase px-3 py-1.5 rounded-full shadow-sm tracking-wider" data-i18n="shop.sheet">Scheda tecnica</span>
+                        </span>
+                        <span class="js-soldout-badge hidden absolute top-3 left-3 bg-[#2c1e16] text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider" data-i18n="shop.soldout">Esaurito</span>
+                    </button>
+                    <div class="px-2 pb-2">
+                        <h3 class="text-xl font-medium text-[#2c1e16] mb-1" data-i18n="p.castagno.name">Castagno</h3>
+                        <p class="text-sm text-[#795548] mb-1" data-i18n="p.castagno.tag">Intenso, persistente, scuro</p>
+                        <p class="js-unit text-xs text-[#795548] mb-4"></p>
+                        <div class="flex items-center justify-between">
+                            <span class="js-price font-bold text-lg text-[#8a6420]"></span>
+                            <button type="button" class="add-to-cart-btn text-xs uppercase tracking-wider font-bold border-2 border-[#2c1e16] text-[#2c1e16] px-5 py-2.5 rounded-full hover:bg-[#2c1e16] hover:text-white transition-colors" data-id="castagno"><span class="lbl-add" data-i18n="shop.add">Aggiungi</span><span class="lbl-sold hidden" data-i18n="shop.soldout">Esaurito</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-product="millefiori" class="group bg-white rounded-3xl p-4 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(193,154,85,0.3)] transition-all duration-500 border border-[#f0eee9]">
+                    <button type="button" class="info-trigger block w-full cursor-pointer bg-[#fcfbf9] rounded-2xl aspect-square mb-5 transition-colors group-hover:bg-[#f5f4f1] overflow-hidden p-4 relative" data-id="millefiori">
+                        <img src="images/millefiori.png" alt="Miele Millefiori" data-i18n-attr="alt:p.millefiori.full" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                            <span class="bg-white/90 text-[#2c1e16] text-[10px] font-bold uppercase px-3 py-1.5 rounded-full shadow-sm tracking-wider" data-i18n="shop.sheet">Scheda tecnica</span>
+                        </span>
+                        <span class="js-soldout-badge hidden absolute top-3 left-3 bg-[#2c1e16] text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider" data-i18n="shop.soldout">Esaurito</span>
+                    </button>
+                    <div class="px-2 pb-2">
+                        <h3 class="text-xl font-medium text-[#2c1e16] mb-1" data-i18n="p.millefiori.name">Millefiori Estivo</h3>
+                        <p class="text-sm text-[#795548] mb-1" data-i18n="p.millefiori.tag">L'essenza del nostro territorio</p>
+                        <p class="js-unit text-xs text-[#795548] mb-4"></p>
+                        <div class="flex items-center justify-between">
+                            <span class="js-price font-bold text-lg text-[#8a6420]"></span>
+                            <button type="button" class="add-to-cart-btn text-xs uppercase tracking-wider font-bold border-2 border-[#2c1e16] text-[#2c1e16] px-5 py-2.5 rounded-full hover:bg-[#2c1e16] hover:text-white transition-colors" data-id="millefiori"><span class="lbl-add" data-i18n="shop.add">Aggiungi</span><span class="lbl-sold hidden" data-i18n="shop.soldout">Esaurito</span></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-product="millefiori_primaverile" class="group bg-white rounded-3xl p-4 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_30px_-10px_rgba(193,154,85,0.3)] transition-all duration-500 border border-[#f0eee9]">
+                    <button type="button" class="info-trigger block w-full cursor-pointer bg-[#fcfbf9] rounded-2xl aspect-square mb-5 transition-colors group-hover:bg-[#f5f4f1] overflow-hidden p-4 relative" data-id="millefiori_primaverile">
+                        <img src="images/millefiori_primaverile.png" alt="Millefiori Primaverile" data-i18n-attr="alt:p.millefiori_primaverile.full" width="600" height="600" loading="lazy" decoding="async" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity rounded-2xl flex items-center justify-center">
+                            <span class="bg-white/90 text-[#2c1e16] text-[10px] font-bold uppercase px-3 py-1.5 rounded-full shadow-sm tracking-wider" data-i18n="shop.sheet">Scheda tecnica</span>
+                        </span>
+                        <span class="js-soldout-badge hidden absolute top-3 left-3 bg-[#2c1e16] text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-full tracking-wider" data-i18n="shop.soldout">Esaurito</span>
+                    </button>
+                    <div class="px-2 pb-2">
+                        <h3 class="text-xl font-medium text-[#2c1e16] mb-1" data-i18n="p.millefiori_primaverile.name">Millefiori Primaverile</h3>
+                        <p class="text-sm text-[#795548] mb-1" data-i18n="p.millefiori_primaverile.tag">La prima fioritura dell'anno</p>
+                        <p class="js-unit text-xs text-[#795548] mb-4"></p>
+                        <div class="flex items-center justify-between">
+                            <span class="js-price font-bold text-lg text-[#8a6420]"></span>
+                            <button type="button" class="add-to-cart-btn text-xs uppercase tracking-wider font-bold border-2 border-[#2c1e16] text-[#2c1e16] px-5 py-2.5 rounded-full hover:bg-[#2c1e16] hover:text-white transition-colors" data-id="millefiori_primaverile"><span class="lbl-add" data-i18n="shop.add">Aggiungi</span><span class="lbl-sold hidden" data-i18n="shop.soldout">Esaurito</span></button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <p class="text-sm text-[#795548] mt-12 italic text-center" data-i18n="shop.note">* Le disponibilità possono variare in base all'andamento stagionale e alle fioriture annuali.</p>
+
+            <!-- COME ORDINARE -->
+            <div class="mt-16 pt-12 border-t border-[#f0eee9]">
+                <h3 class="text-2xl font-light mb-8" data-i18n="how.title">Come ordinare</h3>
+                <ol class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto list-none p-0">
+                    <li class="flex gap-4 items-start bg-[#fcfbf9] border border-[#f0eee9] rounded-2xl p-5">
+                        <span class="flex-shrink-0 w-9 h-9 rounded-full bg-[#2c1e16] text-white font-bold flex items-center justify-center" aria-hidden="true">1</span>
+                        <div><h4 class="font-bold text-[#2c1e16]" data-i18n="how.s1.t">Scegli i mieli</h4><p class="text-sm text-[#5d4037] mt-1" data-i18n="how.s1.d">Aggiungi i vasetti al carrello.</p></div>
+                    </li>
+                    <li class="flex gap-4 items-start bg-[#fcfbf9] border border-[#f0eee9] rounded-2xl p-5">
+                        <span class="flex-shrink-0 w-9 h-9 rounded-full bg-[#2c1e16] text-white font-bold flex items-center justify-center" aria-hidden="true">2</span>
+                        <div><h4 class="font-bold text-[#2c1e16]" data-i18n="how.s2.t">Invia l'ordine su WhatsApp</h4><p class="text-sm text-[#5d4037] mt-1" data-i18n="how.s2.d">Il messaggio è già compilato, ti basta inviarlo.</p></div>
+                    </li>
+                    <li class="flex gap-4 items-start bg-[#fcfbf9] border border-[#f0eee9] rounded-2xl p-5">
+                        <span class="flex-shrink-0 w-9 h-9 rounded-full bg-[#2c1e16] text-white font-bold flex items-center justify-center" aria-hidden="true">3</span>
+                        <div><h4 class="font-bold text-[#2c1e16]" data-i18n="how.s3.t">Conferma e consegna</h4><p class="text-sm text-[#5d4037] mt-1" data-i18n="how.s3.d">Ti confermiamo disponibilità, spedizione e pagamento, oppure concordiamo il ritiro in azienda.</p></div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENSIONI: restano nascoste finché non aggiungi recensioni vere in CONFIG.testimonials (app.js) -->
+    <section id="reviews" class="content-section hidden" style="min-height: auto; padding-bottom: 40px;">
+        <span class="uppercase tracking-[0.2em] text-sm font-bold text-[#8a6420] mb-4 block" data-i18n="rev.eyebrow">Chi ha assaggiato il nostro miele</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 3rem;" data-i18n="rev.title">Parole Gentili</h2>
+        <div id="reviews-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- SEZIONE COME ARRIVARE (MAPPA GOOGLE SOLO DOPO CONSENSO) -->
+    <section class="content-section" id="contatti" style="max-width: 1100px; padding-bottom: 20px;">
+        <span class="uppercase tracking-[0.2em] text-sm font-bold text-[#8a6420] mb-4 block" data-i18n="map.eyebrow">Dove siamo</span>
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 3rem;" data-i18n="map.title">Vieni a trovarci</h2>
+
+        <div class="flex flex-col lg:flex-row items-center gap-12 text-left">
+            <div class="w-full lg:w-5/12">
+                <div class="bg-white p-8 rounded-3xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-[#f0eee9]">
+                    <h3 class="text-2xl font-medium text-[#2c1e16] mb-4" data-i18n="dir.title">Le indicazioni</h3>
+                    <p class="text-lg text-[#5d4037] leading-relaxed mb-6" data-i18n="dir.p">In prossimità di Breda di Piave prendere in direzione <strong>"Vacil"</strong> e imboccare Vicolo Pascoli.</p>
+                    <div class="flex items-start gap-4 p-4 bg-[#fcfbf9] rounded-2xl border border-[#eaddcf]">
+                        <svg class="w-8 h-8 text-[#8a6420] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <p class="text-[#795548] text-sm" data-i18n="dir.note">Segui il vicolo sterrato per circa <strong>800 metri</strong>, circondato dalla natura. L'azienda è ben segnalata alla fine del percorso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-7/12">
+                <div id="map-box" class="bg-[#fcfbf9] rounded-3xl shadow-inner border border-[#eaddcf] overflow-hidden p-2 relative aspect-[4/3] w-full">
+                    <!-- Placeholder mostrato finché il visitatore non acconsente a caricare Google Maps -->
+                    <div id="map-consent" class="absolute inset-2 rounded-[1.25rem] bg-[#f0eee9] flex flex-col items-center justify-center text-center p-6 gap-4">
+                        <svg class="w-10 h-10 text-[#8a6420]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <p class="text-sm text-[#5d4037] max-w-sm" data-i18n="map.consent">Per mostrarti la mappa carichiamo Google Maps, che può installare cookie di terze parti. Procedendo acconsenti al caricamento.</p>
+                        <div class="flex flex-wrap items-center justify-center gap-3">
+                            <button type="button" id="map-load-btn" class="bg-[#2c1e16] text-white text-xs uppercase tracking-widest font-bold px-6 py-3 rounded-full hover:bg-[#8a6420] transition-colors" data-i18n="map.load">Carica la mappa</button>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Apicoltura%20Maricolli%20Breda%20di%20Piave" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-widest font-bold text-[#2c1e16] underline underline-offset-4 decoration-[#d7ccc8]" data-i18n="map.open">Apri in Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE CONTATTI & FOOTER -->
+    <section class="content-section" style="padding-bottom: 40px; min-height: auto;">
+        <h2 style="font-size: 2rem; font-weight: 300; margin-bottom: 1.5rem;" data-i18n="visit.title">Visite e Acquisti</h2>
+        <p style="font-size: 1.1rem; color: #5d4037; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;" data-i18n="visit.p">
+            Siamo felici di accoglierti in azienda per mostrarti il nostro lavoro. L'apertura al pubblico avviene <strong>esclusivamente previo contatto telefonico</strong>.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-8 mb-16">
+            <a href="tel:+393298275626" class="flex items-center gap-2 text-[#8a6420] hover:text-[#2c1e16] font-bold text-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +39 329 827 5626
+            </a>
+            <span class="hidden md:block text-[#d7ccc8]" aria-hidden="true">|</span>
+            <a href="mailto:api.maricolli@libero.it" class="flex items-center gap-2 text-[#8a6420] hover:text-[#2c1e16] font-bold text-lg transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                api.maricolli@libero.it
+            </a>
+        </div>
+        <footer class="border-t border-[#d7ccc8] pt-8 text-sm text-[#795548] text-left md:text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <span data-i18n="foot.addr"><strong>Azienda Agricola Apicoltura Maricolli</strong><br>Vicolo Pascoli 7 – 31030 Breda di Piave (TV)</span>
+                <span id="vat-line" class="hidden block mt-1"></span>
+            </div>
+            <div class="text-xs flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                <span id="social-links" class="hidden"></span>
+                <a href="privacy.html" class="hover:text-[#2c1e16] underline decoration-[#d7ccc8] underline-offset-4" data-i18n="foot.privacy">Privacy Policy</a>
+                <a href="cookie.html" class="hover:text-[#2c1e16] underline decoration-[#d7ccc8] underline-offset-4" data-i18n="foot.cookie">Cookie Policy</a>
+            </div>
+        </footer>
+    </section>
+    </main>
+
+    <!-- UI CARRELLO (SIDEBAR) -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/40 z-[55] opacity-0 pointer-events-none backdrop-blur-sm transition-opacity duration-300" aria-hidden="true"></div>
+    <div id="cart-sidebar" role="dialog" aria-modal="true" aria-labelledby="cart-title" inert aria-hidden="true" class="fixed top-0 right-0 w-full sm:w-[420px] h-full bg-[#fcfbf9] shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-[#f0eee9] flex items-center justify-between bg-white">
+            <h2 id="cart-title" class="text-xl font-bold text-[#2c1e16] flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#8a6420]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                <span data-i18n="cart.title">Il tuo ordine</span>
+            </h2>
+            <button type="button" id="close-cart-btn" class="text-[#795548] hover:text-[#2c1e16] transition-colors p-1" data-i18n-attr="aria-label:aria.cart.close" aria-label="Chiudi il carrello">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <div id="empty-cart-msg" class="text-center mt-12 hidden">
+                <svg class="w-12 h-12 text-[#d7ccc8] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                <p class="text-[#795548] italic" data-i18n="cart.empty">Il tuo carrello è vuoto.</p>
+            </div>
+        </div>
+        <div class="p-6 border-t border-[#f0eee9] bg-white shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.05)]">
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-lg text-[#795548]" data-i18n="cart.total">Totale</span>
+                <span id="cart-total" class="text-2xl font-bold text-[#8a6420]">€ 0,00</span>
+            </div>
+            <p class="text-xs text-[#795548] leading-relaxed mb-5" data-i18n="cart.shipnote">La spedizione non è inclusa nel totale: ti comunichiamo il costo su WhatsApp prima della conferma, in base a destinazione e peso. Ritiro in azienda su appuntamento telefonico. Il pagamento si concorda alla conferma dell'ordine.</p>
+            <button type="button" id="checkout-btn" class="w-full flex items-center justify-center gap-2 bg-[#2c1e16] text-white py-4 rounded-full uppercase tracking-widest font-bold text-sm hover:bg-[#8a6420] transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.146.561 4.237 1.624 6.079L.226 23.766l5.792-1.52c1.785 1.01 3.82 1.542 5.918 1.542 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm3.623 17.15c-.172.483-.986.918-1.428.983-.437.065-1.002.164-3.155-.726-2.614-1.079-4.301-3.743-4.432-3.918-.13-.175-1.059-1.41-1.059-2.689 0-1.278.665-1.905.903-2.155.238-.25.518-.313.689-.313.172 0 .344 0 .495.008.156.008.366-.059.57.437.209.508.718 1.751.78 1.875.063.125.105.27.021.438-.083.167-.125.27-.25.417-.125.145-.264.32-.381.429-.125.114-.257.242-.119.479.135.234.604 1.002 1.297 1.62.893.796 1.649 1.042 1.884 1.157.234.114.375.093.515-.063.141-.156.609-.709.776-.954.167-.245.334-.203.547-.125.213.078 1.349.636 1.578.75.23.114.381.171.437.266.058.093.058.541-.114 1.025z"/></svg>
+                <span data-i18n="cart.checkout">Ordina su WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL SCHEDA TECNICA MIELE -->
+    <div id="honey-modal-overlay" inert aria-hidden="true" class="fixed inset-0 bg-black/60 z-[80] backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="honey-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="bg-[#fcfbf9] rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300 relative">
+
+            <button type="button" id="close-info-btn" class="absolute top-4 right-4 z-10 text-[#795548] hover:text-[#2c1e16] bg-white rounded-full p-2 shadow-md transition-colors" data-i18n-attr="aria-label:aria.modal.close" aria-label="Chiudi">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <div class="relative h-56 bg-[#f5f4f1] flex items-center justify-center p-6 border-b border-[#eaddcf]">
+                <img id="modal-img" src="" alt="" class="h-full object-contain drop-shadow-lg">
+            </div>
+
+            <div class="p-8 text-left">
+                <span id="modal-tag" class="text-xs font-bold tracking-widest uppercase text-[#8a6420] mb-2 block"></span>
+                <h3 id="modal-title" class="text-2xl font-medium text-[#2c1e16] mb-4"></h3>
+                <div id="modal-desc" class="text-[#5d4037] text-[0.95rem] leading-relaxed space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+/*!
+ * i18n.js — traduzioni IT/EN condivise da tutte le pagine del sito.
+ *
+ * Come funziona:
+ *  - Il testo ITALIANO vive nell'HTML (così Google lo indicizza) e viene letto dal DOM.
+ *  - Questo file contiene le traduzioni INGLESI per ogni chiave `data-i18n`,
+ *    più le stringhe dinamiche (carrello, messaggio WhatsApp, schede tecniche) in IT e EN.
+ *  - La lingua scelta è salvata in localStorage ("maricolli_lang").
+ *  - Si può forzare con ?lang=en oppure ?lang=it nell'URL.
+ */
+(function (global) {
+  'use strict';
+
+  var STORE_KEY = 'maricolli_lang';
+  var listeners = [];
+  var lang = 'it';
+
+  /* ------------------------------------------------------------------ */
+  /*  DIZIONARI                                                          */
+  /* ------------------------------------------------------------------ */
+  var DICT = {
+    /* ---------- ITALIANO: solo stringhe dinamiche (il resto è nell'HTML) ---------- */
+    it: {
+      'meta.title': 'Miele biodinamico a Breda di Piave (TV) | Apicoltura Maricolli',
+      'meta.desc': 'Miele biodinamico di Breda di Piave (TV): tarassaco, acacia, tiglio, castagno e millefiori da apicoltura biologica ICEA. Ordina su WhatsApp, visite in azienda su appuntamento.',
+      'legal.privacy.title': 'Privacy Policy | Apicoltura Maricolli',
+      'legal.cookie.title': 'Cookie Policy | Apicoltura Maricolli',
+
+      'aria.cart.open': 'Apri il carrello',
+      'cart.each': '/pz',
+      'cart.remove': 'Rimuovi',
+      'cart.up': 'Aumenta quantità di {name}',
+      'cart.down': 'Diminuisci quantità di {name}',
+      'cart.added': '{name} aggiunto al carrello',
+      'cart.items': '{n} articoli',
+      'cart.shipping': 'spedizione esclusa',
+
+      'shop.add': 'Aggiungi',
+      'foot.vat': 'P.IVA',
+      'shop.net': 'Peso netto',
+      'shop.perKg': 'al kg',
+      'shop.sheetFor': 'Scheda tecnica: {name}',
+
+      'wa.intro': 'Salve Apicoltura Maricolli, vorrei effettuare il seguente ordine:',
+      'wa.total': 'Totale prodotti: {total} (spedizione esclusa)',
+      'wa.outro': 'Resto in attesa di conferma per disponibilità, costo di spedizione (o ritiro in azienda) e modalità di pagamento. Grazie!',
+
+      'sheet.appearance': 'Aspetto',
+      'sheet.aroma': 'Profilo aromatico',
+      'sheet.pairing': 'Abbinamenti',
+
+      'p.tarassaco.full': 'Miele di Tarassaco',
+      'p.acacia.full': 'Miele di Acacia',
+      'p.tiglio.full': 'Miele di Tiglio',
+      'p.castagno.full': 'Miele di Castagno',
+      'p.millefiori.full': 'Miele Millefiori Estivo',
+      'p.millefiori_primaverile.full': 'Miele Millefiori Primaverile',
+
+      'd.tarassaco.tag': 'Cristallizzazione rapida',
+      'd.tarassaco.appearance': "Giallo intenso, luminoso. Tende a cristallizzare quasi immediatamente formando una massa cremosa, fondente e spalmabile.",
+      'd.tarassaco.aroma': "L'odore è intenso e pungente. Al palato sorprende con un sapore molto delicato e fresco, che ricorda l'infuso di camomilla, la vaniglia e i fiori freschi.",
+      'd.tarassaco.pairing': 'Ottimo spalmato su pane tostato, nello yogurt e sui formaggi freschi.',
+
+      'd.acacia.tag': 'Liquido e delicato',
+      'd.acacia.appearance': "Colore chiarissimo, da quasi trasparente a giallo paglierino. Grazie all'elevato contenuto naturale di fruttosio, si mantiene allo stato liquido per lunghissimo tempo.",
+      'd.acacia.aroma': 'Profumo molto tenue, floreale. In bocca è dolcissimo, vellutato, con sentori di confetto e bacca di vaniglia. Non altera i sapori se usato come dolcificante.',
+      'd.acacia.pairing': 'Ideale per dolcificare tè, tisane e latte senza coprirne il gusto.',
+
+      'd.tiglio.tag': 'Mentolato e balsamico',
+      'd.tiglio.appearance': 'Da ambrato chiaro a scuro, con riflessi giallo-verdi quando è liquido. Cristallizza nel tempo assumendo un colore bianco avorio a grana media.',
+      'd.tiglio.aroma': 'Ha un profumo di media intensità, fresco e balsamico. Il sapore è molto persistente, rinfrescante e ricorda le erbe officinali, la salvia e gli agrumi.',
+      'd.tiglio.pairing': 'Si abbina bene a tisane, formaggi semistagionati e frutta secca.',
+
+      'd.castagno.tag': 'Intenso, tannico, amaro',
+      'd.castagno.appearance': 'Colore scuro, ambrato con decisi toni rossicci e bruni. Tende a rimanere liquido a lungo per la sua composizione zuccherina.',
+      'd.castagno.aroma': 'Profumo forte, pungente, legnoso e tannico. Il sapore è deciso, meno dolce degli altri mieli e presenta un inconfondibile retrogusto amaro e astringente.',
+      'd.castagno.pairing': 'Perfetto in abbinamento a formaggi stagionati ed erborinati.',
+
+      'd.millefiori.tag': "L'essenza del territorio",
+      'd.millefiori.appearance': 'Colore ambrato, di intensità variabile. Tende a cristallizzare in tempi medi formando una pasta compatta.',
+      'd.millefiori.aroma': 'Un bouquet complesso che raccoglie le fioriture spontanee della campagna (spesso rovo, erba medica, trifoglio e melata). Sapore rotondo, caldo, avvolgente e leggermente caramellato.',
+      'd.millefiori.pairing': 'Versatile in cucina: dal tè al pane e burro, dalle crepes ai formaggi.',
+
+      'd.millefiori_primaverile.tag': 'Il risveglio della natura',
+      'd.millefiori_primaverile.appearance': 'Colore mediamente più chiaro rispetto alla varietà estiva, a volte dorato pallido. Cristallizza velocemente, spesso con una consistenza finissima, omogenea e burrosa.',
+      'd.millefiori_primaverile.aroma': "Profumo delicato, fresco, marcatamente floreale e fruttato. Racchiude l'energia delle fioriture di ciliegio selvatico, melo, pruno e salice.",
+      'd.millefiori_primaverile.pairing': 'Perfetto per colazioni e merende, spalmato sul pane o nello yogurt.',
+
+      'map.consent.ok': 'Mappa caricata.'
+    },
+
+    /* ---------- ENGLISH: tutte le chiavi ---------- */
+    en: {
+      'meta.title': 'Biodynamic Honey in Breda di Piave (TV) | Apicoltura Maricolli',
+      'meta.desc': 'Biodynamic honey from Breda di Piave (Treviso, Italy): dandelion, acacia, linden, chestnut and wildflower honey from ICEA-certified organic beekeeping. Order on WhatsApp; farm visits by appointment.',
+      'legal.privacy.title': 'Privacy Policy | Apicoltura Maricolli',
+      'legal.cookie.title': 'Cookie Policy | Apicoltura Maricolli',
+      'legal.back': '← Back to the website',
+
+      /* navigazione */
+      'skip': 'Skip to content',
+      'nav.story': 'Our Story',
+      'nav.gallery': 'Gallery',
+      'nav.shop': 'Shop',
+      'nav.contacts': 'Contact',
+      'm.nav': 'Navigation',
+      'm.story': 'Our Story',
+      'm.gallery': 'Gallery',
+      'm.shop': 'Shop Honey',
+      'm.contacts': 'Contact & Map',
+      'm.lang': 'Language',
+
+      /* aria */
+      'aria.lang': 'Language',
+      'aria.cart.open': 'Open the cart',
+      'aria.cart.close': 'Close the cart',
+      'aria.menu.open': 'Open the menu',
+      'aria.menu.close': 'Close the menu',
+      'aria.modal.close': 'Close',
+      'aria.mainnav': 'Main navigation',
+      'aria.mobilenav': 'Mobile navigation',
+      'aria.gallery': 'Photo gallery',
+      'aria.home': 'Apicoltura Maricolli, home',
+
+      /* hero */
+      'hero.sub': 'Biodynamic honey since 2007',
+      'hero.cta': 'Discover our honeys',
+
+      /* storia */
+      'story.eyebrow': 'Since 2007',
+      'story.title': 'Respect for the Hive',
+      'story.p1': 'From our very beginnings we have followed <strong>biodynamic beekeeping</strong>. For us, honey and wax always come second to one absolute priority: the health and balance of our bees.',
+      'story.p2': 'We do not harvest pollen, so as not to take vital nourishment away from the colonies, and propolis is reused inside the hive. Our biodynamic path is an ongoing awareness of the deep bond between human beings and the being of the hive.',
+      'story.cert1': 'ICEA Organic (Cod. E2657)',
+      'story.cert2': 'Transitioning to Demeter',
+
+      /* galleria */
+      'gal.eyebrow': 'Our life in the apiary',
+      'gal.title': 'Moments and Passion',
+      'gal.alt1': 'Beehives at sunset',
+      'gal.alt2': 'Apiary in the woods',
+      'gal.alt3': 'The beekeeper in nature',
+      'gal.alt4': 'Honey jars being prepared',
+      'gal.alt5': 'Display of our honeys',
+      'gal.alt6': 'Honey and beeswax',
+
+      /* shop */
+      'shop.eyebrow': 'Our production',
+      'shop.title': 'Biodynamic Honeys',
+      'shop.sheet': 'Product sheet',
+      'shop.add': 'Add',
+      'shop.soldout': 'Sold out',
+      'shop.note': '* Availability may vary with the season and the yearly blooms.',
+      'shop.net': 'Net weight',
+      'shop.perKg': 'per kg',
+      'shop.sheetFor': 'Product sheet: {name}',
+
+      'p.tarassaco.name': 'Dandelion',
+      'p.tarassaco.tag': 'Intense spring harvest',
+      'p.acacia.name': 'Acacia',
+      'p.acacia.tag': 'Delicate and crystal clear',
+      'p.tiglio.name': 'Linden',
+      'p.tiglio.tag': 'Aromatic and balsamic',
+      'p.castagno.name': 'Chestnut',
+      'p.castagno.tag': 'Bold, lingering, dark',
+      'p.millefiori.name': 'Summer Wildflower',
+      'p.millefiori.tag': 'The essence of our land',
+      'p.millefiori_primaverile.name': 'Spring Wildflower',
+      'p.millefiori_primaverile.tag': 'The first bloom of the year',
+
+      'p.tarassaco.full': 'Dandelion Honey',
+      'p.acacia.full': 'Acacia Honey',
+      'p.tiglio.full': 'Linden Honey',
+      'p.castagno.full': 'Chestnut Honey',
+      'p.millefiori.full': 'Summer Wildflower Honey',
+      'p.millefiori_primaverile.full': 'Spring Wildflower Honey',
+
+      /* come ordinare */
+      'how.title': 'How to order',
+      'how.s1.t': 'Choose your honeys',
+      'how.s1.d': 'Add the jars to your cart.',
+      'how.s2.t': 'Send the order on WhatsApp',
+      'how.s2.d': 'The message is already written, you just have to send it.',
+      'how.s3.t': 'Confirmation and delivery',
+      'how.s3.d': 'We confirm availability, shipping and payment, or we arrange pickup at the farm.',
+
+      /* recensioni (sezione visibile solo se compili CONFIG.testimonials in app.js) */
+      'rev.eyebrow': 'Who tasted our honey',
+      'rev.title': 'Kind Words',
+
+      /* dove siamo */
+      'map.eyebrow': 'Where we are',
+      'map.title': 'Come and visit us',
+      'dir.title': 'Directions',
+      'dir.p': 'Near Breda di Piave, head towards <strong>"Vacil"</strong> and take Vicolo Pascoli.',
+      'dir.note': 'Follow the dirt lane for about <strong>800 metres</strong>, surrounded by nature. The farm is clearly signposted at the end of the track.',
+      'map.consent': 'To show the map we load Google Maps, which may set third-party cookies. By continuing you agree to it being loaded.',
+      'map.load': 'Load the map',
+      'map.open': 'Open in Google Maps',
+      'map.consent.ok': 'Map loaded.',
+
+      /* visite e footer */
+      'visit.title': 'Visits and Purchases',
+      'visit.p': 'We are happy to welcome you to the farm and show you our work. The farm is open to the public <strong>by phone appointment only</strong>.',
+      'foot.addr': '<strong>Azienda Agricola Apicoltura Maricolli</strong><br>Vicolo Pascoli 7 – 31030 Breda di Piave (TV), Italy',
+      'foot.privacy': 'Privacy Policy',
+      'foot.cookie': 'Cookie Policy',
+      'foot.vat': 'VAT no.',
+
+      /* carrello */
+      'cart.title': 'Your order',
+      'cart.empty': 'Your cart is empty.',
+      'cart.total': 'Total',
+      'cart.checkout': 'Order on WhatsApp',
+      'cart.shipnote': 'Shipping is not included in the total: we confirm the cost on WhatsApp before you commit, based on destination and weight. Pickup at the farm by phone appointment. Payment is agreed upon order confirmation.',
+      'cart.each': '/pc',
+      'cart.remove': 'Remove',
+      'cart.up': 'Increase quantity of {name}',
+      'cart.down': 'Decrease quantity of {name}',
+      'cart.added': '{name} added to the cart',
+      'cart.items': '{n} items',
+      'cart.shipping': 'shipping not included',
+
+      /* WhatsApp */
+      'wa.intro': 'Hello Apicoltura Maricolli, I would like to place the following order:',
+      'wa.total': 'Products total: {total} (shipping not included)',
+      'wa.outro': 'I look forward to your confirmation of availability, shipping cost (or pickup at the farm) and payment method. Thank you!',
+
+      /* scheda tecnica */
+      'sheet.appearance': 'Appearance',
+      'sheet.aroma': 'Aroma and flavour',
+      'sheet.pairing': 'Pairings',
+
+      'd.tarassaco.tag': 'Fast crystallization',
+      'd.tarassaco.appearance': 'Bright, intense yellow. It crystallizes almost immediately into a creamy, melting, spreadable mass.',
+      'd.tarassaco.aroma': 'The scent is intense and pungent. On the palate it surprises with a very delicate, fresh flavour reminiscent of chamomile infusion, vanilla and fresh flowers.',
+      'd.tarassaco.pairing': 'Lovely spread on toasted bread, stirred into yogurt or served with fresh cheeses.',
+
+      'd.acacia.tag': 'Liquid and delicate',
+      'd.acacia.appearance': 'Very pale, from almost transparent to straw yellow. Thanks to its naturally high fructose content it stays liquid for a very long time.',
+      'd.acacia.aroma': 'A very subtle, floral scent. On the palate it is very sweet and velvety, with notes of sugared almonds and vanilla bean. It does not alter other flavours when used as a sweetener.',
+      'd.acacia.pairing': 'Ideal for sweetening tea, herbal infusions and milk without masking their taste.',
+
+      'd.tiglio.tag': 'Minty and balsamic',
+      'd.tiglio.appearance': 'From light to dark amber, with yellow-green glints when liquid. Over time it crystallizes to an ivory-white, medium-grain texture.',
+      'd.tiglio.aroma': 'Medium-intensity, fresh and balsamic aroma. The flavour is long-lasting and refreshing, recalling medicinal herbs, sage and citrus.',
+      'd.tiglio.pairing': 'Pairs well with herbal infusions, semi-aged cheeses and dried fruit.',
+
+      'd.castagno.tag': 'Bold, tannic, bitter',
+      'd.castagno.appearance': 'Dark amber with distinct reddish and brown tones. It stays liquid for a long time thanks to its sugar composition.',
+      'd.castagno.aroma': 'Strong, pungent, woody and tannic aroma. The flavour is bold, less sweet than other honeys, with an unmistakable bitter, astringent aftertaste.',
+      'd.castagno.pairing': 'Perfect with aged and blue cheeses.',
+
+      'd.millefiori.tag': 'The essence of our land',
+      'd.millefiori.appearance': 'Amber colour of variable intensity. It crystallizes in a medium time, forming a compact paste.',
+      'd.millefiori.aroma': 'A complex bouquet drawn from spontaneous countryside blooms (often bramble, alfalfa, clover and honeydew). A round, warm, enveloping flavour with a slight caramel note.',
+      'd.millefiori.pairing': 'Versatile in the kitchen: from tea to bread and butter, from crêpes to cheeses.',
+
+      'd.millefiori_primaverile.tag': 'Nature awakens',
+      'd.millefiori_primaverile.appearance': 'Generally lighter than the summer variety, at times a pale gold. It crystallizes quickly, often with a very fine, even, buttery texture.',
+      'd.millefiori_primaverile.aroma': 'Delicate, fresh, distinctly floral and fruity aroma. It captures the energy of wild cherry, apple, plum and willow blossoms.',
+      'd.millefiori_primaverile.pairing': 'Perfect for breakfasts and snacks, spread on bread or stirred into yogurt.'
+    }
+  };
+
+  /* ------------------------------------------------------------------ */
+  /*  UTILITÀ                                                            */
+  /* ------------------------------------------------------------------ */
+  function safeGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function safeSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage non disponibile */ } }
+
+  function detect() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (e) { /* ignore */ }
+    if (q === 'en' || q === 'it') return q;
+    var s = safeGet(STORE_KEY);
+    if (s === 'en' || s === 'it') return s;
+    // Default sempre italiano: così Google (e chi arriva da link italiani) vede l'italiano.
+    return 'it';
+  }
+
+  function t(key, vars) {
+    var s = (DICT[lang] || {})[key];
+    if (s === undefined) s = DICT.it[key];
+    if (s === undefined) s = key;
+    if (vars) {
+      s = s.replace(/\{(\w+)\}/g, function (m, k) { return (k in vars) ? vars[k] : m; });
+    }
+    return s;
+  }
+
+  function setMeta(selector, value) {
+    var el = document.querySelector(selector);
+    if (el && value) el.setAttribute('content', value);
+  }
+
+  /* ------------------------------------------------------------------ */
+  /*  APPLICAZIONE DELLA LINGUA AL DOM                                   */
+  /* ------------------------------------------------------------------ */
+  function apply() {
+    var root = document.documentElement;
+    root.lang = lang;
+
+    // 1) Testi: data-i18n="chiave"  (il testo IT originale viene memorizzato al primo passaggio)
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      if (el.dataset.it === undefined) el.dataset.it = el.innerHTML;
+      var k = el.getAttribute('data-i18n');
+      var en = DICT.en[k];
+      el.innerHTML = (lang === 'en' && en !== undefined) ? en : el.dataset.it;
+    });
+
+    // 2) Attributi: data-i18n-attr="alt:chiave;aria-label:altra.chiave"
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+      el.__it = el.__it || {};
+      el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
+        var i = pair.indexOf(':');
+        if (i < 1) return;
+        var attr = pair.slice(0, i).trim();
+        var key = pair.slice(i + 1).trim();
+        if (!(attr in el.__it)) el.__it[attr] = el.getAttribute(attr) || '';
+        var en = DICT.en[key];
+        el.setAttribute(attr, (lang === 'en' && en !== undefined) ? en : el.__it[attr]);
+      });
+    });
+
+    // 3) Titolo e meta tag
+    var titleKey = root.getAttribute('data-title-key');
+    if (titleKey) document.title = t(titleKey);
+    var descKey = root.getAttribute('data-desc-key');
+    if (descKey) {
+      setMeta('meta[name="description"]', t(descKey));
+      setMeta('meta[property="og:description"]', t(descKey));
+      setMeta('meta[name="twitter:description"]', t(descKey));
+    }
+    if (titleKey) {
+      setMeta('meta[property="og:title"]', t(titleKey));
+      setMeta('meta[name="twitter:title"]', t(titleKey));
+    }
+    setMeta('meta[property="og:locale"]', lang === 'en' ? 'en_GB' : 'it_IT');
+
+    // 4) Pulsanti del toggle
+    document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang-btn') === lang ? 'true' : 'false');
+    });
+
+    // 5) Blocchi interi per lingua (pagine legali)
+    document.querySelectorAll('[data-lang-block]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-lang-block') !== lang;
+    });
+
+    // 6) Chi deve ridisegnare qualcosa di dinamico (carrello, schede, ecc.)
+    listeners.forEach(function (fn) { try { fn(lang); } catch (e) { console.error(e); } });
+  }
+
+  function setLang(l) {
+    if (l !== 'it' && l !== 'en') return;
+    lang = l;
+    safeSet(STORE_KEY, l);
+    apply();
+  }
+
+  /* ------------------------------------------------------------------ */
+  /*  API PUBBLICA                                                       */
+  /* ------------------------------------------------------------------ */
+  global.I18N = {
+    t: t,
+    getLang: function () { return lang; },
+    setLang: setLang,
+    onChange: function (fn) { listeners.push(fn); },
+    refresh: apply,
+    safeGet: safeGet,
+    safeSet: safeSet
+  };
+
+  function init() {
+    lang = detect();
+    document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang-btn')); });
+    });
+    apply();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})(window);
+
+</script>
+    <script>
+/*!
+ * app.js — logica della home di Apicoltura Maricolli.
+ * Dipende da i18n.js (da caricare prima).
+ *
+ * ▼▼▼  QUI SOTTO TROVI TUTTO CIÒ CHE PUOI MODIFICARE SENZA TOCCARE IL RESTO  ▼▼▼
+ */
+(function () {
+  'use strict';
+
+  /* ================================================================== */
+  /*  CONFIGURAZIONE                                                     */
+  /* ================================================================== */
+  var CONFIG = {
+    whatsapp: '393298275626',
+
+    // ⚠️ DA VERIFICARE: peso netto del vasetto in grammi (usato per mostrare "Peso netto"
+    // e il prezzo al kg). Se un prodotto ha un formato diverso, aggiungi `weightG` nel
+    // prodotto qui sotto. Il valore 500 è un SEGNAPOSTO.
+    productWeightG: 500,
+
+    // Partita IVA: se la compili compare nel footer e nei dati strutturati. Es. '01234567890'
+    vatNumber: '',
+
+    // Social: lascia '' per nasconderli. Es. 'https://www.instagram.com/tuoprofilo'
+    social: { instagram: '', facebook: '' },
+
+    // Recensioni: sezione nascosta finché l'array è vuoto. Aggiungi SOLO recensioni vere:
+    // { text: { it: 'Miele fantastico!', en: 'Fantastic honey!' }, author: 'Maria R.', place: 'Treviso' }
+    testimonials: [],
+
+    // Animazione hero (frame in scroll)
+    frames: { count: 95, dir: 'images/frames/', prefix: 'ezgif-frame-', ext: 'jpg' },
+
+    // Per i dati strutturati / Open Graph (lascia '' se non lo sai: usa l'URL corrente)
+    siteUrl: ''
+  };
+
+  // price = prezzo in €, available = false mostra "Esaurito" e blocca l'acquisto.
+  var PRODUCTS = {
+    tarassaco:              { price: 12.50, available: true, img: 'images/tarassaco.png' },
+    acacia:                 { price: 14.00, available: true, img: 'images/acacia.png' },
+    tiglio:                 { price: 13.00, available: true, img: 'images/tiglio.png' },
+    castagno:               { price: 13.50, available: true, img: 'images/castagno.png' },
+    millefiori:             { price: 11.00, available: true, img: 'images/millefiori.png' },
+    millefiori_primaverile: { price: 11.00, available: true, img: 'images/millefiori_primaverile.png' }
+  };
+
+  /* ================================================================== */
+  /*  UTILITÀ                                                            */
+  /* ================================================================== */
+  var t = I18N.t;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PRODUCT_IDS = Object.keys(PRODUCTS);
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function money(n) {
+    return I18N.getLang() === 'en' ? '€' + n.toFixed(2) : '€ ' + n.toFixed(2).replace('.', ',');
+  }
+  function grams(g) {
+    var s = g >= 1000 ? String(g / 1000) + ' kg' : g + ' g';
+    return I18N.getLang() === 'en' ? s : s.replace('.', ',');
+  }
+  function weightOf(id) { return PRODUCTS[id].weightG || CONFIG.productWeightG; }
+  function pricePerKg(id) { return PRODUCTS[id].price / weightOf(id) * 1000; }
+  function fullName(id) { return t('p.' + id + '.full'); }
+  function announce(msg) { var el = $('#live-region'); if (el) { el.textContent = ''; setTimeout(function () { el.textContent = msg; }, 30); } }
+
+  /* ================================================================== */
+  /*  LAYER (menu, carrello, scheda): Esc, focus trap, ritorno del focus  */
+  /* ================================================================== */
+  var currentLayer = null;
+  var returnFocus = null;
+
+  function focusables(root) {
+    return $$('a[href], button:not([disabled]), input:not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])', root)
+      .filter(function (el) { return el.offsetParent !== null || el === document.activeElement; });
+  }
+  function openLayer(L) {
+    if (currentLayer && currentLayer !== L) closeLayer(true);
+    returnFocus = document.activeElement;
+    currentLayer = L;
+    L.panel.removeAttribute('inert');
+    L.panel.setAttribute('aria-hidden', 'false');
+    L.show();
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () {
+      var target = (L.initialFocus && L.initialFocus()) || focusables(L.panel)[0];
+      if (target) target.focus();
+    }, 60);
+  }
+  function closeLayer(silent) {
+    if (!currentLayer) return;
+    var L = currentLayer;
+    currentLayer = null;
+    L.hide();
+    L.panel.setAttribute('inert', '');
+    L.panel.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (!silent && returnFocus && returnFocus.focus) returnFocus.focus();
+  }
+  document.addEventListener('keydown', function (e) {
+    if (!currentLayer) return;
+    if (e.key === 'Escape') { e.preventDefault(); closeLayer(); return; }
+    if (e.key === 'Tab') {
+      var f = focusables(currentLayer.panel);
+      if (!f.length) { e.preventDefault(); return; }
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      else if (!currentLayer.panel.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+    }
+  });
+  function overlayShow(el) { el.classList.remove('opacity-0', 'pointer-events-none'); }
+  function overlayHide(el) { el.classList.add('opacity-0', 'pointer-events-none'); }
+
+  /* ---------- Menu mobile ---------- */
+  var mobileMenu = $('#mobile-menu');
+  var mobileOverlay = $('#mobile-menu-overlay');
+  var menuLayer = {
+    panel: mobileMenu,
+    show: function () { mobileMenu.classList.remove('-translate-x-full'); overlayShow(mobileOverlay); $('#mobile-menu-open').setAttribute('aria-expanded', 'true'); },
+    hide: function () { mobileMenu.classList.add('-translate-x-full'); overlayHide(mobileOverlay); $('#mobile-menu-open').setAttribute('aria-expanded', 'false'); }
+  };
+  $('#mobile-menu-open').addEventListener('click', function () { openLayer(menuLayer); });
+  $('#mobile-menu-close').addEventListener('click', function () { closeLayer(); });
+  mobileOverlay.addEventListener('click', function () { closeLayer(); });
+  $$('.mobile-nav-link').forEach(function (a) { a.addEventListener('click', function () { closeLayer(true); }); });
+
+  /* ---------- Carrello (apertura/chiusura) ---------- */
+  var cartSidebar = $('#cart-sidebar');
+  var cartOverlay = $('#cart-overlay');
+  var cartLayer = {
+    panel: cartSidebar,
+    show: function () { cartSidebar.classList.remove('translate-x-full'); overlayShow(cartOverlay); $('#cart-toggle-btn').setAttribute('aria-expanded', 'true'); },
+    hide: function () { cartSidebar.classList.add('translate-x-full'); overlayHide(cartOverlay); $('#cart-toggle-btn').setAttribute('aria-expanded', 'false'); }
+  };
+  $('#cart-toggle-btn').addEventListener('click', function () { currentLayer === cartLayer ? closeLayer() : openLayer(cartLayer); });
+  $('#close-cart-btn').addEventListener('click', function () { closeLayer(); });
+  cartOverlay.addEventListener('click', function () { closeLayer(); });
+
+  /* ---------- Scheda tecnica (modal) ---------- */
+  var modalRoot = $('#honey-modal-overlay');
+  var modalBox = $('#honey-modal');
+  var openSheetId = null;
+  var modalLayer = {
+    panel: modalRoot,
+    show: function () { overlayShow(modalRoot); modalBox.classList.remove('scale-95'); },
+    hide: function () { overlayHide(modalRoot); modalBox.classList.add('scale-95'); openSheetId = null; },
+    initialFocus: function () { return $('#close-info-btn'); }
+  };
+  function fillSheet(id) {
+    $('#modal-title').textContent = fullName(id);
+    $('#modal-tag').textContent = t('d.' + id + '.tag');
+    var img = $('#modal-img');
+    img.src = PRODUCTS[id].img;
+    img.alt = fullName(id);
+    $('#modal-desc').innerHTML =
+      '<p><strong class="text-[#2c1e16]">' + esc(t('sheet.appearance')) + ':</strong> ' + esc(t('d.' + id + '.appearance')) + '</p>' +
+      '<p><strong class="text-[#2c1e16]">' + esc(t('sheet.aroma')) + ':</strong> ' + esc(t('d.' + id + '.aroma')) + '</p>' +
+      '<p><strong class="text-[#2c1e16]">' + esc(t('sheet.pairing')) + ':</strong> ' + esc(t('d.' + id + '.pairing')) + '</p>';
+  }
+  $$('.info-trigger').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-id');
+      if (!PRODUCTS[id]) return;
+      openSheetId = id;
+      fillSheet(id);
+      openLayer(modalLayer);
+    });
+  });
+  $('#close-info-btn').addEventListener('click', function () { closeLayer(); });
+  modalRoot.addEventListener('click', function (e) { if (e.target === modalRoot) closeLayer(); });
+
+  /* ================================================================== */
+  /*  PRODOTTI (prezzo, peso, prezzo al kg, disponibilità)                */
+  /* ================================================================== */
+  function renderProducts() {
+    PRODUCT_IDS.forEach(function (id) {
+      var card = $('[data-product="' + id + '"]');
+      if (!card) return;
+      var p = PRODUCTS[id];
+      $('.js-price', card).textContent = money(p.price);
+      $('.js-unit', card).textContent =
+        t('shop.net') + ' ' + grams(weightOf(id)) + ' · ' + money(pricePerKg(id)) + ' ' + t('shop.perKg');
+
+      var btn = $('.add-to-cart-btn', card);
+      btn.disabled = !p.available;
+      $('.lbl-add', btn).classList.toggle('hidden', !p.available);
+      $('.lbl-sold', btn).classList.toggle('hidden', p.available);
+      btn.classList.toggle('opacity-50', !p.available);
+      btn.classList.toggle('cursor-not-allowed', !p.available);
+      $('.js-soldout-badge', card).classList.toggle('hidden', p.available);
+      btn.setAttribute('aria-label', t('shop.add') + ': ' + fullName(id));
+
+      var trig = $('.info-trigger', card);
+      trig.setAttribute('aria-label', t('shop.sheetFor', { name: fullName(id) }));
+    });
+  }
+
+  /* ================================================================== */
+  /*  CARRELLO (persistente)                                              */
+  /* ================================================================== */
+  var CART_KEY = 'maricolli_cart';
+  var cart = []; // [{ id, qty }]
+
+  function loadCart() {
+    try {
+      var raw = JSON.parse(I18N.safeGet(CART_KEY) || '[]');
+      if (!Array.isArray(raw)) return [];
+      return raw.filter(function (i) {
+        return i && PRODUCTS[i.id] && PRODUCTS[i.id].available && Number.isInteger(i.qty) && i.qty > 0;
+      }).map(function (i) { return { id: i.id, qty: Math.min(i.qty, 99) }; });
+    } catch (e) { return []; }
+  }
+  function saveCart() { I18N.safeSet(CART_KEY, JSON.stringify(cart)); }
+
+  function addToCart(id) {
+    if (!PRODUCTS[id] || !PRODUCTS[id].available) return;
+    var it = cart.find(function (i) { return i.id === id; });
+    if (it) it.qty = Math.min(99, it.qty + 1); else cart.push({ id: id, qty: 1 });
+    saveCart(); renderCart();
+    announce(t('cart.added', { name: fullName(id) }));
+  }
+
+  $$('.add-to-cart-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      addToCart(btn.getAttribute('data-id'));
+      if (currentLayer !== cartLayer) openLayer(cartLayer);
+    });
+  });
+
+  var cartItemsEl = $('#cart-items');
+  var emptyMsg = $('#empty-cart-msg');
+  var cartTotalEl = $('#cart-total');
+  var cartBadge = $('#cart-badge');
+  var checkoutBtn = $('#checkout-btn');
+
+  cartItemsEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-action]');
+    if (!btn) return;
+    var id = btn.getAttribute('data-id');
+    var action = btn.getAttribute('data-action');
+    var it = cart.find(function (i) { return i.id === id; });
+    if (!it) return;
+    if (action === 'increase') it.qty = Math.min(99, it.qty + 1);
+    else if (action === 'decrease') { it.qty--; if (it.qty <= 0) cart = cart.filter(function (i) { return i.id !== id; }); }
+    else if (action === 'remove') cart = cart.filter(function (i) { return i.id !== id; });
+    saveCart(); renderCart();
+    // se l'elemento premuto è sparito, riporta il focus in un punto sensato
+    var again = $('[data-action][data-id="' + id + '"]', cartItemsEl);
+    if (!again) (focusables(cartSidebar)[0] || $('#close-cart-btn')).focus();
+  });
+
+  function renderCart() {
+    $$('.cart-line', cartItemsEl).forEach(function (n) { n.remove(); });
+
+    var total = 0, count = 0;
+    if (!cart.length) {
+      emptyMsg.classList.remove('hidden');
+      cartBadge.classList.add('hidden');
+      checkoutBtn.disabled = true;
+    } else {
+      emptyMsg.classList.add('hidden');
+      checkoutBtn.disabled = false;
+      cart.forEach(function (item) {
+        var p = PRODUCTS[item.id];
+        var name = fullName(item.id);
+        total += p.price * item.qty;
+        count += item.qty;
+        var el = document.createElement('div');
+        el.className = 'cart-line flex flex-col bg-white p-4 rounded-2xl shadow-sm border border-[#f0eee9]';
+        el.innerHTML =
+          '<div class="flex justify-between items-start mb-3">' +
+            '<div class="pr-4">' +
+              '<h4 class="text-sm font-bold text-[#2c1e16] leading-tight">' + esc(name) + '</h4>' +
+              '<span class="text-[11px] text-[#795548]">' + esc(grams(weightOf(item.id))) + '</span>' +
+            '</div>' +
+            '<div class="text-right whitespace-nowrap">' +
+              '<span class="font-bold text-[#8a6420] block">' + esc(money(p.price * item.qty)) + '</span>' +
+              '<span class="text-[10px] text-[#795548]">' + esc(money(p.price)) + esc(t('cart.each')) + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="flex justify-between items-center">' +
+            '<div class="flex items-center border border-[#d7ccc8] rounded-full bg-[#fcfbf9]">' +
+              '<button type="button" data-action="decrease" data-id="' + esc(item.id) + '" aria-label="' + esc(t('cart.down', { name: name })) + '" class="w-9 h-8 flex items-center justify-center text-[#795548] hover:text-[#2c1e16] hover:bg-[#f0eee9] rounded-l-full transition-colors font-bold">−</button>' +
+              '<span class="text-xs font-bold w-6 text-center text-[#2c1e16]" aria-live="polite">' + item.qty + '</span>' +
+              '<button type="button" data-action="increase" data-id="' + esc(item.id) + '" aria-label="' + esc(t('cart.up', { name: name })) + '" class="w-9 h-8 flex items-center justify-center text-[#795548] hover:text-[#2c1e16] hover:bg-[#f0eee9] rounded-r-full transition-colors font-bold">+</button>' +
+            '</div>' +
+            '<button type="button" data-action="remove" data-id="' + esc(item.id) + '" class="text-[11px] font-semibold text-red-700 hover:text-red-900 underline underline-offset-2 transition-colors">' + esc(t('cart.remove')) + '</button>' +
+          '</div>';
+        cartItemsEl.appendChild(el);
+      });
+      cartBadge.textContent = count;
+      cartBadge.classList.remove('hidden');
+    }
+    cartTotalEl.textContent = money(total);
+    $('#cart-toggle-btn').setAttribute('aria-label', t('aria.cart.open') + (count ? ' (' + t('cart.items', { n: count }) + ')' : ''));
+  }
+
+  checkoutBtn.addEventListener('click', function () {
+    if (!cart.length) return;
+    var lines = [t('wa.intro'), ''];
+    var total = 0;
+    cart.forEach(function (item) {
+      var sub = PRODUCTS[item.id].price * item.qty;
+      total += sub;
+      lines.push('- ' + item.qty + 'x ' + fullName(item.id) + ' ' + grams(weightOf(item.id)) + ' (' + money(sub) + ')');
+    });
+    lines.push('', '*' + t('wa.total', { total: money(total) }) + '*', '', t('wa.outro'));
+    var url = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(lines.join('\n'));
+    window.open(url, '_blank', 'noopener');
+  });
+
+  /* ================================================================== */
+  /*  HERO: frame in scroll con caricamento progressivo                   */
+  /* ================================================================== */
+  var scrollWrapper = $('#scroll-wrapper-honey');
+  var canvas = $('#sequence-canvas-honey');
+  var gradientOverlay = $('#dynamic-gradient');
+  var heroContent = $('#hero-content');
+  var ctx = canvas ? canvas.getContext('2d') : null;
+  var FRAME_COUNT = CONFIG.frames.count;
+  var frames = new Array(FRAME_COUNT + 1);
+  var currentFrame = 1, canvasSized = false, ticking = false;
+
+  function framePath(i) {
+    return CONFIG.frames.dir + CONFIG.frames.prefix + String(i).padStart(3, '0') + '.' + CONFIG.frames.ext;
+  }
+  function drawFrame(index) {
+    if (!canvas || !ctx) return;
+    for (var i = index; i >= 1; i--) {
+      var img = frames[i];
+      if (img && img.complete && img.naturalWidth > 0) {
+        if (!canvasSized) { canvas.width = img.naturalWidth; canvas.height = img.naturalHeight; canvasSized = true; }
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        return;
+      }
+    }
+  }
+  function frameLoadOrder() {
+    // Su schermi piccoli o con "risparmio dati" carichiamo un frame su due (metà del peso).
+    var conn = navigator.connection || {};
+    var lite = window.innerWidth < 768 || conn.saveData || /2g/.test(conn.effectiveType || '');
+    var stride = lite ? 2 : 1;
+    var seen = {}, order = [];
+    function push(i) { if (i >= 1 && i <= FRAME_COUNT && !seen[i]) { seen[i] = true; order.push(i); } }
+    push(1);
+    [16, 8, 4, 2, 1].forEach(function (step) {
+      if (step < stride) return;
+      for (var i = 1; i <= FRAME_COUNT; i += step) { if ((i - 1) % stride === 0) push(i); }
+    });
+    push(FRAME_COUNT);
+    return order;
+  }
+  function preloadFrames() {
+    var queue = frameLoadOrder();
+    var active = 0, MAX = 6;
+    function next() {
+      while (active < MAX && queue.length) {
+        (function (i) {
+          active++;
+          var img = new Image();
+          img.decoding = 'async';
+          var done = function () {
+            active--;
+            if (i <= currentFrame || !canvasSized) drawFrame(currentFrame);
+            next();
+          };
+          img.onload = done; img.onerror = done;
+          img.src = framePath(i);
+          frames[i] = img;
+        })(queue.shift());
+      }
+      if (!queue.length && !active) drawFrame(currentFrame);
+    }
+    next();
+  }
+  function updateFrame(force) {
+    if (!scrollWrapper || !canvas) return;
+    var total = scrollWrapper.offsetHeight;
+    if (!total) return;
+    var scrolled = -scrollWrapper.getBoundingClientRect().top;
+    var fraction = Math.min(1, Math.max(0, scrolled / total));
+    var frame = Math.round(fraction * (FRAME_COUNT - 1)) + 1;
+    if (force === true || frame !== currentFrame) { currentFrame = frame; drawFrame(frame); }
+    if (gradientOverlay) {
+      var o = 0;
+      if (fraction > 0.05) o = Math.min(1, (fraction - 0.05) / 0.45);
+      gradientOverlay.style.opacity = o.toFixed(3);
+    }
+    if (heroContent) {
+      var h = Math.max(0, 1 - fraction / 0.09);
+      heroContent.style.opacity = h.toFixed(3);
+      heroContent.style.visibility = h <= 0.01 ? 'hidden' : 'visible';
+    }
+  }
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { updateFrame(); ticking = false; });
+  }, { passive: true });
+  window.addEventListener('resize', function () { updateFrame(true); });
+  if (document.readyState === 'complete') preloadFrames(); else window.addEventListener('load', preloadFrames);
+
+  /* ================================================================== */
+  /*  GALLERIA: autoscroll + drag, con pausa e rispetto di reduced-motion  */
+  /* ================================================================== */
+  (function initGallery() {
+    var slider = $('#gallery-slider');
+    if (!slider) return;
+
+    if (!reduceMotion) {
+      $$(':scope > *', slider).forEach(function (item) {
+        var clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        $$('img', clone).forEach(function (im) { im.alt = ''; });
+        slider.appendChild(clone);
+      });
+    }
+
+    var SPEED = 0.7;             // px per frame a 60fps
+    var pos = slider.scrollLeft; // posizione in float (scrollLeft arrotonda i decimali)
+    var dragging = false, hovering = false, touching = false, visible = true;
+    var startX = 0, startScroll = 0, last = 0, resumeTimer = null;
+
+    function half() { return slider.scrollWidth / 2; }
+
+    function tick(ts) {
+      var dt = last ? Math.min(40, ts - last) / 16.67 : 1;
+      last = ts;
+      if (!reduceMotion && visible && !dragging && !hovering && !touching && !document.hidden) {
+        pos += SPEED * dt;
+        if (pos >= half()) pos -= half();
+        slider.scrollLeft = pos;
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    // Wrap anche durante lo scroll manuale e sincronizza la posizione float
+    slider.addEventListener('scroll', function () {
+      if (!reduceMotion && slider.scrollLeft >= half()) slider.scrollLeft -= half();
+      if (dragging || hovering || touching) pos = slider.scrollLeft;
+    }, { passive: true });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.05 }).observe(slider);
+    }
+
+    slider.addEventListener('mouseenter', function () { hovering = true; });
+    slider.addEventListener('mouseleave', function () {
+      hovering = false; pos = slider.scrollLeft;
+      if (dragging) endDrag();
+    });
+    slider.addEventListener('focusin', function () { hovering = true; });
+    slider.addEventListener('focusout', function () { hovering = false; pos = slider.scrollLeft; });
+
+    function endDrag() {
+      dragging = false;
+      slider.classList.remove('cursor-grabbing');
+      slider.classList.add('cursor-grab');
+      pos = slider.scrollLeft;
+    }
+    slider.addEventListener('mousedown', function (e) {
+      dragging = true;
+      slider.classList.remove('cursor-grab'); slider.classList.add('cursor-grabbing');
+      startX = e.pageX - slider.offsetLeft;
+      startScroll = slider.scrollLeft;
+    });
+    window.addEventListener('mouseup', function () { if (dragging) endDrag(); });
+    slider.addEventListener('mousemove', function (e) {
+      if (!dragging) return;
+      e.preventDefault();
+      slider.scrollLeft = startScroll - (e.pageX - slider.offsetLeft - startX) * 1.5;
+    });
+
+    // Touch: fermiamo l'autoplay mentre il dito è giù e per un attimo dopo (inerzia)
+    slider.addEventListener('touchstart', function () { touching = true; clearTimeout(resumeTimer); }, { passive: true });
+    slider.addEventListener('touchend', function () {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function () { touching = false; pos = slider.scrollLeft; }, 2500);
+    }, { passive: true });
+  })();
+
+  /* ================================================================== */
+  /*  MAPPA: Google Maps solo dopo il consenso                            */
+  /* ================================================================== */
+  var MAP_KEY = 'maricolli_map_ok';
+  var MAP_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.2341932241748!2d12.310809693693093!3d45.70633840240053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477947397ff80e95%3A0x17a37f6937e0230c!2sApicoltura%20Maricolli!5e0!3m2!1sit!2slt!4v1794058826215!5m2!1sit!2slt';
+  function loadMap() {
+    var box = $('#map-box');
+    if (!box || $('iframe', box)) return;
+    var f = document.createElement('iframe');
+    f.src = MAP_SRC;
+    f.title = 'Google Maps — Apicoltura Maricolli';
+    f.setAttribute('allowfullscreen', '');
+    f.setAttribute('loading', 'lazy');
+    f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    f.style.cssText = 'border:0;border-radius:1.25rem;width:100%;height:100%;position:absolute;inset:0;';
+    box.appendChild(f);
+    var consent = $('#map-consent');
+    if (consent) consent.classList.add('hidden');
+    announce(t('map.consent.ok'));
+  }
+  var mapBtn = $('#map-load-btn');
+  if (mapBtn) mapBtn.addEventListener('click', function () { I18N.safeSet(MAP_KEY, '1'); loadMap(); });
+  if (I18N.safeGet(MAP_KEY) === '1') loadMap();
+
+  /* ================================================================== */
+  /*  RECENSIONI, SOCIAL, P.IVA (compaiono solo se configurati)           */
+  /* ================================================================== */
+  function renderReviews() {
+    var sec = $('#reviews');
+    if (!sec) return;
+    if (!CONFIG.testimonials.length) { sec.classList.add('hidden'); return; }
+    sec.classList.remove('hidden');
+    var lang = I18N.getLang();
+    $('#reviews-list').innerHTML = CONFIG.testimonials.map(function (r) {
+      var txt = (r.text && (r.text[lang] || r.text.it)) || '';
+      return '<figure class="bg-white p-6 rounded-3xl border border-[#f0eee9] shadow-sm text-left">' +
+        '<blockquote class="text-[#5d4037] leading-relaxed italic">“' + esc(txt) + '”</blockquote>' +
+        '<figcaption class="mt-4 text-sm font-semibold text-[#795548]">' + esc(r.author || '') + (r.place ? ' · ' + esc(r.place) : '') + '</figcaption>' +
+        '</figure>';
+    }).join('');
+  }
+  function renderFooterExtras() {
+    var soc = $('#social-links');
+    if (soc) {
+      var out = [];
+      if (CONFIG.social.instagram) out.push('<a href="' + esc(CONFIG.social.instagram) + '" target="_blank" rel="noopener noreferrer" class="hover:text-[#2c1e16] underline decoration-[#d7ccc8] underline-offset-4">Instagram</a>');
+      if (CONFIG.social.facebook) out.push('<a href="' + esc(CONFIG.social.facebook) + '" target="_blank" rel="noopener noreferrer" class="hover:text-[#2c1e16] underline decoration-[#d7ccc8] underline-offset-4">Facebook</a>');
+      soc.innerHTML = out.join('<span aria-hidden="true"> · </span>');
+      soc.classList.toggle('hidden', !out.length);
+    }
+    var vat = $('#vat-line');
+    if (vat) {
+      vat.classList.toggle('hidden', !CONFIG.vatNumber);
+      vat.textContent = CONFIG.vatNumber ? t('foot.vat') + ' ' + CONFIG.vatNumber : '';
+    }
+  }
+
+  /* ================================================================== */
+  /*  DATI STRUTTURATI (schema.org) per Google                            */
+  /* ================================================================== */
+  function renderJsonLd() {
+    var base = CONFIG.siteUrl || (location.origin !== 'null' ? location.origin + location.pathname : '');
+    function abs(p) { try { return new URL(p, base || location.href).href; } catch (e) { return p; } }
+    var business = {
+      '@type': 'LocalBusiness',
+      '@id': (base || '') + '#azienda',
+      name: 'Apicoltura Maricolli',
+      legalName: 'Azienda Agricola Apicoltura Maricolli',
+      description: t('meta.desc'),
+      telephone: '+393298275626',
+      email: 'api.maricolli@libero.it',
+      image: abs('images/galleria/apicoltura-maricolli-1.jpg'),
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Vicolo Pascoli 7',
+        postalCode: '31030',
+        addressLocality: 'Breda di Piave',
+        addressRegion: 'TV',
+        addressCountry: 'IT'
+      },
+      geo: { '@type': 'GeoCoordinates', latitude: 45.7063384, longitude: 12.3108097 },
+      sameAs: [CONFIG.social.instagram, CONFIG.social.facebook].filter(Boolean)
+    };
+    if (CONFIG.vatNumber) business.vatID = 'IT' + CONFIG.vatNumber.replace(/^IT/i, '');
+    var graph = [business];
+    PRODUCT_IDS.forEach(function (id) {
+      var p = PRODUCTS[id];
+      graph.push({
+        '@type': 'Product',
+        name: fullName(id),
+        description: t('d.' + id + '.aroma'),
+        image: abs(p.img),
+        brand: { '@type': 'Brand', name: 'Apicoltura Maricolli' },
+        weight: { '@type': 'QuantitativeValue', value: weightOf(id), unitCode: 'GRM' },
+        offers: {
+          '@type': 'Offer',
+          price: p.price.toFixed(2),
+          priceCurrency: 'EUR',
+          availability: p.available ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+          seller: { '@id': (base || '') + '#azienda' }
+        }
+      });
+    });
+    var el = $('#jsonld');
+    if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'jsonld'; document.head.appendChild(el); }
+    el.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+  }
+
+  /* ================================================================== */
+  /*  AVVIO + cambio lingua                                               */
+  /* ================================================================== */
+  function renderAll() {
+    renderProducts();
+    renderCart();
+    renderReviews();
+    renderFooterExtras();
+    renderJsonLd();
+    if (openSheetId) fillSheet(openSheetId);
+  }
+
+  cart = loadCart();
+  saveCart();
+  renderAll();
+  I18N.onChange(renderAll);
+  updateFrame(true);
+})();
+
+</script>
+</body>
+</html>
