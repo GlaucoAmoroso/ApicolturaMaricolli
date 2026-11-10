@@ -249,7 +249,7 @@
         /* GALLERIA: striscia compatta che scorre in orizzontale, foto orizzontali, angoli vivi */
         .gal-head { max-width: 80rem; margin: 0 auto 1.5rem; padding: 0 1.25rem; }
         @media (min-width: 768px) { .gal-head { padding: 0 2rem; } }
-        #gallery-slider { display: flex; align-items: flex-start; gap: 4px; overflow-x: auto; padding: 0 1.25rem; cursor: grab; user-select: none; -webkit-overflow-scrolling: touch; }
+        #gallery-slider { display: flex; align-items: flex-start; gap: 4px; overflow-x: auto; padding: 0 1.25rem; cursor: grab; user-select: none; -webkit-overflow-scrolling: touch; overflow-y: hidden; overscroll-behavior-x: contain; touch-action: pan-x pan-y; }
         @media (min-width: 768px) { #gallery-slider { padding: 0 2rem; } }
         .gal-item { flex: none; margin: 0; width: 72vw; }
         @media (min-width: 640px) { .gal-item { width: 44vw; } }
@@ -1511,7 +1511,19 @@
     });
 
     // Touch: fermiamo l'autoplay mentre il dito è giù e per un attimo dopo (inerzia)
-    slider.addEventListener('touchstart', function () { touching = true; clearTimeout(resumeTimer); }, { passive: true });
+    var tx = 0, ty = 0, axis = '';
+    slider.addEventListener('touchstart', function (e) {
+      touching = true; clearTimeout(resumeTimer); axis = '';
+      tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+    }, { passive: true });
+    // Se il dito va soprattutto in verticale e' la pagina che scorre: la galleria non si ferma
+    slider.addEventListener('touchmove', function (e) {
+      if (axis) return;
+      var dx = Math.abs(e.touches[0].clientX - tx), dy = Math.abs(e.touches[0].clientY - ty);
+      if (dx < 6 && dy < 6) return;
+      axis = dy > dx ? 'y' : 'x';
+      if (axis === 'y') { touching = false; pos = slider.scrollLeft; }
+    }, { passive: true });
     slider.addEventListener('touchend', function () {
       clearTimeout(resumeTimer);
       resumeTimer = setTimeout(function () { touching = false; pos = slider.scrollLeft; }, 2500);
